@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HycalPro - Get Started</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            min-height: 100vh;
+            color: #263238;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #5b4be7, #7957ee);
+            color: white;
+            text-align: center;
+            padding: 55px 20px 70px;
+            border-radius: 0 0 45px 45px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 650px;
+            margin: -40px auto 50px;
+            background: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: 26px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d7dbe3;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #6754e8;
+            box-shadow: 0 0 0 3px rgba(103,84,232,0.12);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .unit {
+            color: #777;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 12px;
+            padding: 15px;
+            border: none;
+            border-radius: 11px;
+            background: #6754e8;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5543d4;
+        }
+
+        .note {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .container {
+                padding: 25px 20px;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <h1>Welcome to HycalPro</h1>
+        <p>Your personalized health & nutrition companion</p>
+    </section>
+
+    <div class="container">
+
+        <h2>Let's Personalize Your Plan</h2>
+
+        <p class="subtitle">
+            Tell us a little about yourself to create your routine.
+        </p>
+
+        <form id="profileForm">
+
+            <!-- NAME -->
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+            <!-- AGE -->
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Enter your age"
+                    min="10"
+                    max="100"
+                    required
+                >
+            </div>
+
+            <!-- HEIGHT + WEIGHT -->
+            <div class="row">
+
+                <div class="form-group">
+                    <label for="height">Height</label>
+                    <input
+                        type="number"
+                        id="height"
+                        placeholder="Height"
+                        min="50"
+                        max="250"
+                        required
+                    >
+                    <div class="unit">cm</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input
+                        type="number"
+                        id="weight"
+                        placeholder="Weight"
+                        min="20"
+                        max="300"
+                        step="0.1"
+                        required
+                    >
+                    <div class="unit">kg</div>
+                </div>
+
+            </div>
+
+            <!-- GOAL -->
+            <div class="form-group">
+                <label for="goal">Your Goal</label>
+
+                <select id="goal" required>
+                    <option value="">Select your goal</option>
+                    <option value="muscle-gain">Build Muscle</option>
+                    <option value="weight-loss">Lose Weight</option>
+                    <option value="maintenance">Maintain Weight</option>
+                    <option value="healthy-lifestyle">Healthy Lifestyle</option>
+                </select>
+            </div>
+
+            <!-- WATER -->
+            <div class="form-group">
+                <label for="waterGoal">Daily Water Preference</label>
+
+                <input
+                    type="number"
+                    id="waterGoal"
+                    placeholder="Example: 3"
+                    min="0.5"
+                    max="10"
+                    step="0.1"
+                    required
+                >
+
+                <div class="unit">Litres per day</div>
+            </div>
+
+            <!-- PROTEIN -->
+            <div class="form-group">
+                <label for="proteinGoal">Daily Protein Goal</label>
+
+                <input
+                    type="number"
+                    id="proteinGoal"
+                    placeholder="Example: 120"
+                    min="10"
+                    max="500"
+                    required
+                >
+
+                <div class="unit">grams per day</div>
+            </div>
+
+            <button type="submit">
+                Create My Personalized Plan →
+            </button>
+
+        </form>
+
+        <p class="note">
+            You can change these preferences later.
+        </p>
+
+    </div>
+
+    <script>
+
+        document.getElementById("profileForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            // Get user information
+            const user = {
+                name: document.getElementById("name").value,
+                age: Number(document.getElementById("age").value),
+                height: Number(document.getElementById("height").value),
+                weight: Number(document.getElementById("weight").value),
+                goal: document.getElementById("goal").value,
+                waterGoal: Number(document.getElementById("waterGoal").value),
+                proteinGoal: Number(document.getElementById("proteinGoal").value)
+            };
+
+            // Save user data
+            localStorage.setItem("hycalproUser", JSON.stringify(user));
+
+            // Go to dashboard
+            window.location.href = "dashboard.html";
+
+        });
+
+    </script>
+
+</body>
+</html>

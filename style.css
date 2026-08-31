@@ -1,0 +1,66 @@
+ body { background-color: red  !important; }
+ body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #e0f7fa, #ffffff);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+    background: linear-gradient(135deg, #d0bfff, #6907bf, #5a189a);
+
+  color: white;
+  padding: 70px 0;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.3em;
+  color: #f0f0f0;
+}
+
+button {
+  background-color: #ffffff;
+  color: #0078d7;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0078d7;
+  color: white;
+}
+
+.login-box {
+  background-color: #ffffff;
+  width: 300px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.login-box button {
+  width: 100%;
+}
